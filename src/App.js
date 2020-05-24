@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import Header from './components/Header.js'
+import Search from './components/Search.js'
+import Shelves from './components/Shelves.js'
 
-function App() {
-  return (
+export default class App extends Component {
+  constructor () {
+    super ()
+    this.state = {
+      collection: []
+    }
+    // this.addBook = this.addBook.bind (this)
+    // this.changeLocation = this.changeLocation.bind (this)
+    // this.deleteBook = this.deleteBook.bind (this)
+  }
+
+  // componentDidMount () {}
+  // addBook () {}
+  // changeLocation (id, location) {}
+  // deleteBook (id) {}
+  
+  render () {
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      App.js
+      <Header />
+      Header.js
+      {/* <Search addBook = {this.addBook}/> */}
+      Shelves.js
     </div>
-  );
+    )
+  }
 }
-
-export default App;

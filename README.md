@@ -1,3 +1,52 @@
+# BiblioFile
+*for people who own so many books they "literarily" can't find them*
+
+## Concept
+
+- This tracking app organizes and displays the user's books according to physical location.
+- Data will be retrieved from a localized JSON (no DB or API).
+- The app supports full CRUD, including methods to return the user's book collection, retrieve a book from the JSON array, add a new book, update a book's location, and delete a book from the user's collection.
+
+## Functionality
+- The app displays two search bars, a result box, and the user's collection of books.
+- The "Find My Book" search bar, activated with the "Find" button, will search for a book in the user's current collection and return a string of that book's location.
+- The "Add a Book" search bar, activated with the "Search" button, will search the JSON array for the book's title and display a mock-up of the book in the result box, where users can select a location and click the "Add Book" button to push the book to their collection.
+- The collection below displays an array of the user's books, including each book's cover, title, author, a drop-down menu to adjust its location, and a "Delete" button to remove it from the collection.
+
+## Endpoints
+- GET - returns a complete array of the user's book collection
+- GET - retrieves a book from the JSON array by title
+- POST - allows users to add search results to their collection
+- PUT - updates a book's current location
+- DELETE - removes a book from the array
+
+## Component Architecture
+- ***App.js*** - a stateful component that holds an array of the user's book collection and contains methods to get, post, put, and delete books
+    - ***Header.js*** - a functional component that displays the app's title and slogan
+    - ***Locator.js*** - a functional component that returns a string of the book's location when the "Find" button is activated
+    - ***Search.js*** - a stateful component that holds a book object mapped from App.js and renders it in the search box for user interaction
+        - ***Results.js*** - a stateful component that holds a boolean to determine if the user has clicked on the location dropdown icon then performs passed methods to change a book's location and add it to the collection
+    - ***Shelves.js*** - a functional component that displays the user's collection, including any books it receives as props from Books.js
+        - ***Books.js*** - a stateful component that holds a book array and provides information to the Shelves for rendering
+
+## Wireframe
+<img src="./BF-wireframe.png">
+
+## Component Tree
+<img src="./BF-tree.png">
+
+
+
+
+
+
+
+
+
+
+
+===========================================
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
