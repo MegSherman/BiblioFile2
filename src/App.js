@@ -10,24 +10,26 @@ export default class App extends Component {
     this.state = {
       collection: []
     }
-    // this.addBook = this.addBook.bind (this)
-    // this.changeLocation = this.changeLocation.bind (this)
-    // this.deleteBook = this.deleteBook.bind (this)
+    this.addBook = this.addBook.bind (this)
+    this.changeLocation = this.changeLocation.bind (this)
+    this.deleteBook = this.deleteBook.bind (this)
   }
 
-  // componentDidMount () {}
-  // addBook () {}
-  // changeLocation (id, location) {}
-  // deleteBook (id) {}
+  componentDidMount () {}
+  addBook () {}
+  changeLocation (id, location) {}
+  deleteBook (id) {}
   
   render () {
     return (
     <div className="App">
-      App.js
+      <p>App.js</p>
       <Header />
-      Header.js
-      {/* <Search addBook = {this.addBook}/> */}
-      Shelves.js
+      <Search addBook = {this.addBook}/>
+      <Shelves
+      collection = {this.state.collection}
+      changeLocation = {this.changeLocation}
+      deleteBook = {this.deleteBook}/>
     </div>
     )
   }

@@ -16,7 +16,7 @@ class Search extends Component {
     render () {
         return (
             <>
-            <div>Finder.js</div>
+            <div>Search.js</div>
             <Results addBook = {this.props.addBook}/>
             </>
         )

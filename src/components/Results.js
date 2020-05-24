@@ -15,7 +15,7 @@ class Results extends Component {
 
     render () {
         return (
-            <div>Grass.js</div>
+            <div>Results.js</div>
         )
     }
 }
