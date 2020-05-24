@@ -1,0 +1,39 @@
+{
+    "id" : 0,
+    "title" : "Born of Metal",
+    "author" : "Meg Sherman",
+    "location" : "desk",
+    "image" : "https://www.acupunctureproducts.com/posterslarge/FiveElementPoster24x36.jpg"
+},
+
+{
+    "id" : 1,
+    "title" : "How Green Was My Valley",
+    "author" : "Richard Llewellyn",
+    "location" : "loft archive",
+    "image" : "https://s9362.pcdn.co/wp-content/uploads/2015/06/HowGreenWasMyValley.png"
+},
+
+{
+    "id" : 2,
+    "title" : "Les Miserables",
+    "author" : "Victor Hugo",
+    "location" : "loft archive",
+    "image" : "https://images-na.ssl-images-amazon.com/images/I/81SGVhaL+dL.jpg"
+},
+
+{
+    "id" : 3,
+    "title" : "The Power of Now",
+    "author" : "Eckhart Tolle",
+    "location" : "beside table",
+    "image" : "https://images-na.ssl-images-amazon.com/images/I/41KrouGOE-L._SY445_QL70_ML2_.jpg"
+},
+
+{
+    "id" : 4,
+    "title" : "From Where You Dream",
+    "author" : "Robert Olen Butler",
+    "location" : "downstairs library",
+    "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQtPLrr_mglGuwkZAjpi1ng4I1A5Pa5ClQ2-Ow7Jf7hk7vafUaAJTxO0zXpDqCep9238JIBnXDJ&usqp=CAc"
+},
