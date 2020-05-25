@@ -4,8 +4,8 @@ import './App.css';
 import Header from './components/Header.js'
 import Locator from './components/Locator.js'
 import Location from './components/Location.js'
-import Search from './components/Search.js'
-import Shelves from './components/Shelves.js'
+import Library from './components/Library.js'
+import Adder from './components/Adder.js';
 
 class App extends Component {
   constructor () {
@@ -14,7 +14,7 @@ class App extends Component {
       collection: []
     }
     this.addBook = this.addBook.bind (this)
-    this.editBook = this.editLocation.bind (this)
+    this.editLocation = this.editLocation.bind (this)
     this.deleteBook = this.deleteBook.bind (this)
   }
 
@@ -32,7 +32,7 @@ class App extends Component {
 
   addBook (title, author, location, image) {
     const body = {title, author, location, image}
-    axios.post ('/api/collection', body).then (res => {
+    axios.post ('/api/collection', body).then ((res) => {
       this.setState ({
         collection: res.data
       })
@@ -41,7 +41,7 @@ class App extends Component {
 
   editLocation (id, newLocation) {
     const body = {newLocation}
-    axios.put (`/api/collection/${id}`, body).then (res => {
+    axios.put (`/api/collection/${id}`, body).then ((res) => {
       this.setState ({
         collection: res.data
       })
@@ -49,7 +49,7 @@ class App extends Component {
   }
 
   deleteBook (id) {
-    axios.delete (`/api/collection/${id}`).then (res => {
+    axios.delete (`/api/collection/${id}`).then ((res) => {
       this.setState ({
         collection: res.data
       })
@@ -65,7 +65,8 @@ class App extends Component {
       />
       <Location/>
       {/* <Search addBook = {this.addBook}/> */}
-      <Shelves
+      <Adder addBook={this.addBook}/>
+      <Library
       collection={this.state.collection}
       editLocation = {this.editLocation}
       deleteBook = {this.deleteBook}/>
