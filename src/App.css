@@ -4,6 +4,18 @@
   padding: 0;
 }
 
+.top-image-bar {
+  width:100vw;
+  height:40vh;
+}
+
+body {
+  background-image: url(https://i.pinimg.com/originals/72/ee/d7/72eed7104f3254fa4d3417a76dd08a68.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .input-line {
   display: flex;
   justify-content: flex-end;
@@ -20,7 +32,7 @@
 
 .input-box-2 {
   height: 6.2vh;
-  width: 20vw;
+  width: 18vw;
   font-size: large;
 }
 
@@ -40,6 +52,7 @@
   text-align: center;
   font-size: small;
   margin: 10px;
+  margin-top: 40px;
   line-height: 0px;
 }
 
@@ -53,4 +66,19 @@ img {
   font-size: small;
   font-weight: 700;
   text-align: center;
+}
+
+h1 {
+  font-family: 'Love Ya Like A Sister', cursive;
+  font-size: 100px;
+  margin: 20px;
+}
+
+h4 {
+  font-size: x-large;
+  margin-top:0;
+}
+
+.my-library {
+  margin-top: 15vh;
 }

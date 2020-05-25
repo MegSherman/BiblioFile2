@@ -13,6 +13,8 @@ class App extends Component {
     this.state = {
       collection: []
     }
+    this.getBook = this.getBook.bind (this)
+    this.listByLocation = this.listByLocation.bind (this)
     this.addBook = this.addBook.bind (this)
     this.editLocation = this.editLocation.bind (this)
     this.deleteBook = this.deleteBook.bind (this)
@@ -27,8 +29,20 @@ class App extends Component {
     .catch (error => console.log (error))
   }
 
-  findBook () {
+  getBook (title) {
+    axios.get (`/api/collection?search=${title}`).then ((res) => {
+      this.setState ({
+        collection: res.data
+      })
+    })
+  }
 
+  listByLocation (location) {
+    axios.get (`api/collection?location=${location}`).then ((res) => {
+      this.setState ({
+        collection: res.data
+      })
+    })
   }
 
   addBook (title, author, location, image) {
@@ -64,11 +78,9 @@ class App extends Component {
     return (
     <div className="App">
       <Header />
-      <Locator 
-      collection={this.state.collection}
+      <Locator getBook={this.getBook}
       />
-      <Location/>
-      {/* <Search addBook = {this.addBook}/> */}
+      <Location listByLocation={this.listByLocation}/>
       <Adder addBook={this.addBook}/>
       <Library
       collection={this.state.collection}

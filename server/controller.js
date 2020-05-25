@@ -1,11 +1,31 @@
 let collection = require ('./../data.json')
 const books = [{id: 0, title: 'Born of Metal', author: 'Meg Sherman', location: 'desk', image: ''}]
-let id = 5
+let id = 23
 
 module.exports = {
 
     getCollection: (req, res) => {
+        const {search} = req.query
+        console.log (search)
+
+        if (search) {
+            let returnedBook = collection.filter (e => e.title.includes(search))
+            return res.status(200).send (returnedBook)
+        } else if (location) {
+            let locationArray = collection.filter (e => e.location.includes(location))
+            return res.status(200).send (locationArray)
+        }
         res.status(200).send(collection)
+    },
+
+    getBook: (req, res) => {
+        const {title} = req.body
+        const index = collection.map (e => e.title = title)
+
+        if (index === null) {
+            return res.status(404).send ('Book not found')
+        }
+        res.status(200).send(collection[index])
     },
     
     addBook: (req, res) => {

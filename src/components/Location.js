@@ -8,22 +8,18 @@ class Location extends Component {
         }
     }
 
-    // locateBook (userInput) {
-    //     if (userInput = collection[id].title) {
-    //         return (`It's in the ${collection[index].location}. Happy reading!`)
-    //     }
-    // }
+handleChange (e) {
+    this.props.listByLocation (e.target.value)
+}
     
     render () {
         return (
             <div class="input-line">
                 <h2>Search By Location:</h2>
-                <input class="input-box" type="text" placeholder="  Enter Location Here"/>
-                <button class="button" onClick="locateBook(userInput)">BROWSE</button>
+                <input onChange={e => this.handleChange(e)}class="input-box" type="text" placeholder="  Enter Location Here"/>
             </div>
         )
     }
-
 }
 
 export default Location
