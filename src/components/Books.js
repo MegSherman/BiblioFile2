@@ -15,7 +15,10 @@ class Books extends Component {
 
     render () {
         return (
-            <div>Books.js</div>
+            <div class="book-info">
+                <img src={this.props.data.image} alt={this.props.data.title}/>
+                <p>{this.props.data.title}</p>
+            </div>
         )
     }
 }

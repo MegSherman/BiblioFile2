@@ -7,7 +7,7 @@ import Location from './components/Location.js'
 import Search from './components/Search.js'
 import Shelves from './components/Shelves.js'
 
-export default class App extends Component {
+class App extends Component {
   constructor () {
     super ()
     this.state = {
@@ -64,11 +64,14 @@ export default class App extends Component {
       // findBook = {this.props.findBook(this.state.collection)}
       />
       <Location/>
-      <Search addBook = {this.addBook}/>
+      {/* <Search addBook = {this.addBook}/> */}
       <Shelves
-      editBook = {this.editLocation}
+      collection={this.state.collection}
+      editLocation = {this.editLocation}
       deleteBook = {this.deleteBook}/>
     </div>
     )
   }
 }
+
+export default App
