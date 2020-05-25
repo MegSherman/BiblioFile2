@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import axios from 'axios'
 import './App.css';
 import Header from './components/Header.js'
 import Locator from './components/Locator.js'
@@ -17,17 +18,43 @@ export default class App extends Component {
     this.deleteBook = this.deleteBook.bind (this)
   }
 
-  getLibrary () {}
+  componentDidMount () {
+    axios.get ('/api/collection').then (res => {
+      this.setState ({
+        collection: res.data
+      })
+    })
+  }
 
   findBook () {
 
   }
 
-  addBook () {}
+  addBook (title, author, location, image) {
+    const body = {title, author, location, image}
+    axios.post ('/api/collection', body).then (res => {
+      this.setState ({
+        collection: res.data
+      })
+    })
+  }
 
-  editLocation () {}
+  editLocation (id, newLocation) {
+    const body = {newLocation}
+    axios.put (`/api/collection/${id}`, body).then (res => {
+      this.setState ({
+        collection: res.data
+      })
+    })
+  }
 
-  deleteBook (id) {}
+  deleteBook (id) {
+    axios.delete (`/api/collection/${id}`).then (res => {
+      this.setState ({
+        collection: res.data
+      })
+    })
+  }
   
   render () {
     return (

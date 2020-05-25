@@ -4,7 +4,7 @@ let id = 5
 
 module.exports = {
 
-    getLibrary: (req, res) => {
+    getCollection: (req, res) => {
         res.status(200).send(collection)
     },
     
