@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 
+
 class Locator extends Component {
     constructor() {
         super ()

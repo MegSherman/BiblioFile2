@@ -13,28 +13,33 @@ export default class App extends Component {
       collection: []
     }
     this.addBook = this.addBook.bind (this)
-    this.changeLocation = this.changeLocation.bind (this)
+    this.editBook = this.editLocation.bind (this)
     this.deleteBook = this.deleteBook.bind (this)
-    // this.collection = this.state.collection.bind (this)
   }
 
-  componentDidMount () {}
-  addBook () {}
-  changeLocation (id, location) {}
-  deleteBook (id) {}
+  getLibrary () {}
 
-  displayCollection () {}
+  findBook () {
+
+  }
+
+  addBook () {}
+
+  editLocation () {}
+
+  deleteBook (id) {}
   
   render () {
     return (
     <div className="App">
       <Header />
-      <Locator collection = {this.state.collection}/>
+      <Locator 
+      // findBook = {this.props.findBook(this.state.collection)}
+      />
       <Location/>
       <Search addBook = {this.addBook}/>
       <Shelves
-      collection = {this.state.collection}
-      changeLocation = {this.changeLocation}
+      editBook = {this.editLocation}
       deleteBook = {this.deleteBook}/>
     </div>
     )
