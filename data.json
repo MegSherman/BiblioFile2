@@ -160,7 +160,7 @@
     },
 
     {
-        "id" : 19,
+        "id" : 20,
         "title" : "A Tale of Two Cities",
         "author" : "Charles Dickens",
         "location" : "references",
@@ -168,7 +168,7 @@
     },
 
     {
-        "id" : 20,
+        "id" : 21,
         "title" : "Harry Potter series",
         "author" : "J.K. Rowling",
         "location" : "children's library",
@@ -176,7 +176,7 @@
     },
 
     {
-        "id" : 21,
+        "id" : 22,
         "title" : "Oh, the Places You'll Go",
         "author" : "Dr. Seuss",
         "location" : "children's library",
