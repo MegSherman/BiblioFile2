@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class Locator extends Component {
+class Location extends Component {
     constructor() {
         super ()
         this.state = {
@@ -17,14 +17,13 @@ class Locator extends Component {
     render () {
         return (
             <div class="input-line">
-                <h2>Find My Book:</h2>
-                <input class="input-box" type="text" placeholder="  Enter Title Here"/>
-                <button class="button" onClick="locateBook(userInput)">FIND</button>
-                {/* <h2>It's in the ({collection[index].location}). Happy reading!</h2> */}
+                <h2>Search By Location:</h2>
+                <input class="input-box" type="text" placeholder="  Enter Location Here"/>
+                <button class="button" onClick="locateBook(userInput)">BROWSE</button>
             </div>
         )
     }
 
 }
 
-export default Locator
+export default Location

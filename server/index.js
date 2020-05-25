@@ -1,19 +1,16 @@
 const express = require ('express')
 const app = express ()
-const collCtrl = require ('./controllers/collectionControllers')
-const fullCtrl = require ('./controllers/fullArrayControllers.js')
+const ctrl = require ('./controller')
 const SERVER_PORT = 4001
 
-app.use (express.json)
+app.use (express.json())
 
-// Full Array Controllers
-app.get ('./../../books.json', fullCtrl.searchForBook)
 
-// Collection Controllers
-app.get ('./../../books.json', collCtrl.displayCollection)
-app.post ('./../../books.json', collCtrl.addBook)
-app.put ('./../../books.json/:book_id', collCtrl.changeLocation)
-app.delete ('./../../books.json/:book_id', collCtrl.deleteBook)
+// Controller Endpoints
+app.get ('/api/collection', ctrl.getLibrary)
+app.post ('/api/collection', ctrl.addBook)
+app.put ('/api/collection/:book_id', ctrl.editBook)
+app.delete ('/api/collection/:book_id', ctrl.deleteBook)
 
 app.listen (SERVER_PORT, () => console.log (`Reading you like a book on port: ${SERVER_PORT}`)
 )
