@@ -24,6 +24,7 @@ class App extends Component {
         collection: res.data
       })
     })
+    .catch (error => console.log (error))
   }
 
   findBook () {
@@ -37,6 +38,7 @@ class App extends Component {
         collection: res.data
       })
     })
+    .catch (error => console.log (error))
   }
 
   editLocation (id, newLocation) {
@@ -46,6 +48,7 @@ class App extends Component {
         collection: res.data
       })
     })
+    .catch (error => console.log (error))
   }
 
   deleteBook (id) {
@@ -54,6 +57,7 @@ class App extends Component {
         collection: res.data
       })
     })
+    .catch (error => console.log (error))
   }
   
   render () {
@@ -61,7 +65,7 @@ class App extends Component {
     <div className="App">
       <Header />
       <Locator 
-      // findBook = {this.props.findBook(this.state.collection)}
+      collection={this.state.collection}
       />
       <Location/>
       {/* <Search addBook = {this.addBook}/> */}

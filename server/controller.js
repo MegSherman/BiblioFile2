@@ -30,6 +30,7 @@ module.exports = {
 
     deleteBook: (req, res) => {
         const {book_id} = req.params
+        const index = collection.findIndex((e) => e.id === +book_id)
 
         if (index === -1) {
             return res.status(404).send ('Book not found')

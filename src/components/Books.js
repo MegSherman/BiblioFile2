@@ -40,7 +40,7 @@ class Books extends Component {
                     <button onClick = {() => this.handleSaveLocation ()}>Save</button>
                 </div>
                 )}
-                <button onClick= {() => this.props.deleteBook (this.props.data.id)}>Delete Book</button>
+                <button onClick = {() => this.props.deleteBook (this.props.data.id)}>Delete Book</button>
             </div>
         )
     }

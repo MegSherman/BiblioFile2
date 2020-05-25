@@ -52,7 +52,7 @@ class Adder extends Component {
             <input onChange={e => this.handleUserAuthor (e)} class="input-box-2" type="text" placeholder="  Enter Author Here"/>
             <input onChange={e => this.handleUserLocation (e)}class="input-box-2" type="text" placeholder="  Enter Location Here"/>
             <input onChange={e => this.handleUserImage (e)} class="input-box-2" type="text" placeholder="  Enter Image Address Here"/>
-            <button class="button" onClick= { () => this.props.addBook (this.state.userTitle, this.state.userAuthor, this.state.userLocation, this.state.userImage)}></button>
+            <button class="button" onClick= { () => this.props.addBook (this.state.userTitle, this.state.userAuthor, this.state.userLocation, this.state.userImage)}>ADD</button>
             </>
         )
     }
