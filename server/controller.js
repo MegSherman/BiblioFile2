@@ -5,7 +5,7 @@ let id = 23
 module.exports = {
 
     getCollection: (req, res) => {
-        const {search} = req.query
+        const {search, location} = req.query
         console.log (search)
 
         if (search) {
